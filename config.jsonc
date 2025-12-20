@@ -1,0 +1,43 @@
+// -*- mode: jsonc -*-
+{
+    "layer": "top",
+    "position": "top",
+    "height": 50, // Reduced height slightly to look tighter
+    "spacing": 4, // Increased spacing slightly inside the groups
+    "margin-top": 0,
+    "margin-bottom": 0,
+    
+    // Modules Left
+    "modules-left": [
+        "cpu",
+        "memory",
+        "temperature",
+        "battery",
+        "power-profiles-daemon",
+        "custom/cava_mviz",
+        "mpris",
+        "hyprland/window"
+    ],
+
+    // Modules Center
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    // Modules Right
+    "modules-right": [
+        "pulseaudio",
+        "backlight",
+        "network",
+        "bluetooth",
+        "hyprland/language",
+        "tray",
+        "custom/swaync",
+        "clock",
+        "custom/power"
+    ],
+
+    "include": [
+        "~/.config/waybar/modules.json"
+    ]
+}

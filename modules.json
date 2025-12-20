@@ -1,0 +1,222 @@
+{
+    "custom/fedora": {
+        "format": "",
+        "on-click": "rofi-wayland -show drun",
+        "tooltip": true,
+        "tooltip-format": "Fedora Linux"
+    },
+
+    "custom/search": {
+        "format": "🔍",
+        "on-click": "$HOME/.config/hypr/web-search.sh",
+        "tooltip": true,
+        "tooltip-format": "Web Search"
+    },
+
+    "custom/cava_mviz": {
+        "exec": "$HOME/.config/waybar/WaybarCava.sh",
+        "format": "{}"
+    },
+
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "all-outputs": true,
+        "warp-on-scroll": true,
+        "format": "{name}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": ""
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 50,
+        "on-click": "hyprctl dispatch window_activate {id}",
+        "on-scroll-up": "hyprctl dispatch window_raise {id}",
+        "on-scroll-down": "hyprctl dispatch window_lower {id}"
+    },
+
+    "custom/swaync": {
+        "tooltip": true,
+        "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+        "format": "{} {icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": "",
+            "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "inhibited-none": "",
+            "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-inhibited-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
+        "escape": true
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%  {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol",
+        "scroll-step": 1
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+        "on-click-right": "pavucontrol -t 4",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%+",
+        "tooltip-format": "{source_desc} | {source_volume}%",
+        "scroll-step": 5
+    },
+
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰌘",
+        "format-disconnected": "󰌙",
+        "tooltip-format": "{ipaddr}  {bandwidthUpBits}  {bandwidthDownBits}",
+        "format-linked": "󰈁 {ifname} (No IP)",
+        "tooltip-format-wifi": "{essid} {icon} {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname} 󰌘",
+        "tooltip-format-disconnected": "󰌙 Disconnected",
+        "max-length": 30,
+        "format-icons": [
+            "󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
+        ],
+        "on-click": "nm-connection-editor",
+        "on-click-right": "kitty nmtui"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true,
+        "on-click": "kitty htop"
+    },
+
+    "memory": {
+        "format": " {}%",
+        "tooltip": true,
+        "on-click": "gnome-disks"
+    },
+
+    "temperature": {
+        "interval": 10,
+        "critical-threshold": 80,
+        "format-critical": " {temperatureC}°C",
+        "format": " {temperatureC}°C"
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 20
+        },
+        "on-click-middle": "acpi -i",
+        "format": "{icon} {capacity}%",
+        "format-full": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon}",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "custom/power": {
+        "tooltip": true,
+        "on-click": "wlogout",
+        "format": "",
+        "tooltip-format": "Power Menu"
+    },
+
+    "tray": {
+        "icon-size": 20,
+        "spacing": 4
+    },
+
+    "backlight": {
+        "interval": 2,
+        "align": 0,
+        "rotate": 0,
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "󰃝",
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
+        "tooltip-format": "backlight {percent}%",
+        "icon-size": 10,
+        "on-scroll-up": "brightnessctl s +5%",
+        "on-scroll-down": "brightnessctl s 5%-"
+    },
+
+    "mpris": {
+        "interval": 10,
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "on-click-middle": "playerctl play-pause",
+        "on-click": "playerctl previous",
+        "on-click-right": "playerctl next",
+        "scroll-step": 5.0,
+        "smooth-scrolling-threshold": 1,
+        "player-icons": {
+            "chromium": "",
+            "default": "",
+            "firefox": "",
+            "kdeconnect": "",
+            "mopidy": "",
+            "mpv": "󰐹",
+            "spotify": "",
+            "vlc": "󰕼"
+        },
+        "status-icons": {
+            "paused": "󰐎",
+            "playing": "",
+            "stopped": ""
+        },
+        "max-length": 30
+    }
+}

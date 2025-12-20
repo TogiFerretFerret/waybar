@@ -1,0 +1,194 @@
+@import "mocha.css";
+
+* {
+    /* `otf-font-awesome` and SpaceMono Nerd Font are required to be installed for icons */
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 15px;
+    min-height: 0;
+}
+
+/* The main window is now transparent and borderless to let the "islands" show through */
+window#waybar {
+    background: transparent;
+    border: none;
+    color: @text;
+}
+
+window#waybar.empty #window {
+    background-color: transparent;
+    padding: 0px;
+    border: 0px;
+}
+
+/* --- THE ISLANDS --- */
+/* This applies the border and background to the three main groups */
+.modules-left,
+.modules-center,
+.modules-right {
+    /* 80% transparent black (0.2 alpha) */
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid @teal;
+    border-radius: 2rem;
+    padding: 2px 10px;       /* Spacing inside the border */
+    margin-top: 5px;         /* Float from top */
+    margin-bottom: 5px;      /* Float from bottom */
+}
+
+/* Add spacing between the three groups so they don't touch */
+.modules-left {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.modules-center {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.modules-right {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* --- MODULES --- */
+/* General styling for all modules */
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#bluetooth,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#power-profiles-daemon,
+#language,
+#mpd,
+#custom-arch,
+#custom-search,
+#custom-swaync,
+#custom-power,
+#hyprland-window {
+    background-color: transparent;
+    padding: 0 8px;
+    margin: 0 2px; /* Small gap between individual modules */
+    border-radius: 1rem;
+    color: @teal;
+}
+
+/* Hover effects */
+#clock:hover,
+#battery:hover,
+#cpu:hover,
+#memory:hover,
+#disk:hover,
+#temperature:hover,
+#backlight:hover,
+#network:hover,
+#pulseaudio:hover,
+#wireplumber:hover,
+#custom-media:hover,
+#tray:hover,
+#mode:hover,
+#bluetooth:hover,
+#idle_inhibitor:hover,
+#scratchpad:hover,
+#power-profiles-daemon:hover,
+#language:hover,
+#mpd:hover,
+#custom-arch:hover,
+#custom-search:hover,
+#custom-swaync:hover,
+#custom-power:hover {
+    background-color: @surface0;
+    color: @teal;
+}
+
+/* --- WORKSPACES --- */
+#workspaces {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+}
+
+#workspaces button {
+    color: @teal;
+    background-color: transparent;
+    /* Reverted to standard pill/capsule shape */
+    border-radius: 2rem;
+    padding: 0 10px;
+    margin: 0 2px;
+    transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+    color: @base;
+    background-color: @teal;
+    /* Reverted to standard pill/capsule shape */
+    border-radius: 2rem;
+}
+
+#workspaces button:hover {
+    color: @base;
+    background-color: @maroon;
+    /* Reverted to standard pill/capsule shape */
+    border-radius: 2rem;
+}
+
+/* --- SPECIFIC MODULE TWEAKS --- */
+
+#custom-arch {
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 15px;
+}
+
+#custom-power {
+    padding-right: 15px;
+    padding-left: 10px;
+}
+
+#window {
+    border-radius: 1rem;
+    padding: 0 10px;
+    background-color: transparent;
+    color: @teal;
+}
+
+#pulseaudio-slider slider,
+#backlight-slider slider {
+    min-width: 0px;
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough,
+#backlight-slider trough {
+    min-width: 80px;
+    min-height: 5px;
+    border-radius: 5px;
+    background-color: @surface1;
+}
+
+#pulseaudio-slider highlight,
+#backlight-slider highlight {
+    min-height: 10px;
+    border-radius: 5px;
+    background-color: @teal;
+}
+
+#custom-cava_mviz {
+    color: @pink;
+    margin-left: 10px;
+    margin-right: 10px;
+}
