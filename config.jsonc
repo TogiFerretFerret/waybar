@@ -28,7 +28,6 @@
     "modules-right": [
         "pulseaudio",
         "backlight",
-        "network",
         "bluetooth",
         "hyprland/language",
         "tray",

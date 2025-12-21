@@ -1,7 +1,7 @@
 {
     "custom/fedora": {
         "format": "",
-        "on-click": "rofi-wayland -show drun",
+        "on-click": "rofi -show drun",
         "tooltip": true,
         "tooltip-format": "Fedora Linux"
     },
