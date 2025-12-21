@@ -110,6 +110,17 @@
         "on-click-right": "kitty nmtui"
     },
 
+    "bluetooth": {
+        "format": "",
+        "format-disabled": "󰂳",
+        "format-connected": "󰂱 {num_connections}",
+        "tooltip-format": " {device_alias}",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": " {device_alias} 󰂄{device_battery_percentage}%",
+        "tooltip": true,
+        "on-click": "blueman-manager"
+    },
+
     "cpu": {
         "format": " {usage}%",
         "tooltip": true,
@@ -156,7 +167,7 @@
     },
 
     "clock": {
-        "format": "{:%H:%M}",
+        "format": "{:%I:%M %p}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
