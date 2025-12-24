@@ -154,16 +154,13 @@
         "format-icons": ["", "", "", "", ""]
     },
 
-    "power-profiles-daemon": {
-        "format": "{icon}",
-        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-        "tooltip": true,
-        "format-icons": {
-            "default": "",
-            "performance": "",
-            "balanced": "",
-            "power-saver": ""
-        }
+    "custom/tlp": {
+        "exec": "~/.config/waybar/scripts/tlp_status.sh",
+        "return-type": "json",
+        "interval": 10,
+        "format": "{}",
+        "on-click": "flatpak run com.github.d4nj1.TLPUI",
+        "tooltip": true
     },
 
     "clock": {

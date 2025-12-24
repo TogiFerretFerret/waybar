@@ -2,8 +2,8 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 50, // Reduced height slightly to look tighter
-    "spacing": 4, // Increased spacing slightly inside the groups
+    "height": 50,
+    "spacing": 4,
     "margin-top": 0,
     "margin-bottom": 0,
     
@@ -13,7 +13,8 @@
         "memory",
         "temperature",
         "battery",
-        "power-profiles-daemon",
+        // Replaced broken power-profiles with TLP
+        "custom/tlp",
         "custom/cava_mviz",
         "mpris",
         "hyprland/window"
