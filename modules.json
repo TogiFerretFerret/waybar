@@ -17,6 +17,15 @@
         "exec": "$HOME/.config/waybar/WaybarCava.sh",
         "format": "{}"
     },
+	"custom/lyric": {
+		"exec": "/usr/local/bin/lrcsnc",
+        "return-type": "json",
+        "hide-empty-text": true,
+        "max-length": 22,
+		"min-length": 22,
+        "tooltip": true,
+        "escape": true
+	},
 
     "hyprland/workspaces": {
         "disable-scroll": false,
@@ -32,7 +41,8 @@
 
     "hyprland/window": {
         "format": "{title}",
-        "max-length": 50,
+		"min-length": 32,
+        "max-length": 32,
         "on-click": "hyprctl dispatch window_activate {id}",
         "on-scroll-up": "hyprctl dispatch window_raise {id}",
         "on-scroll-down": "hyprctl dispatch window_lower {id}"
@@ -150,6 +160,7 @@
         "format-full": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
+        "format-plugged": " {capacity}%",
         "format-alt": "{time} {icon}",
         "format-icons": ["", "", "", "", ""]
     },

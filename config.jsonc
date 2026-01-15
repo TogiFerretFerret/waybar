@@ -30,7 +30,7 @@
         "pulseaudio",
         "backlight",
         "bluetooth",
-        "hyprland/language",
+        "custom/lyric",
         "tray",
         "custom/swaync",
         "clock",
