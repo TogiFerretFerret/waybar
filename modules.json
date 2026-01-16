@@ -216,6 +216,7 @@
         "interval": 5,
         "format": "{player_icon} {dynamic}",
         "format-paused": "{status_icon} <i>{dynamic}</i>",
+		"format-stopped": "■ Nothing playing",
         "on-click-middle": "playerctl play-pause",
         "on-click": "playerctl previous",
         "on-click-right": "playerctl next",
