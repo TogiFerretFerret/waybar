@@ -192,3 +192,6 @@ window#waybar.empty #window {
     margin-left: 10px;
     margin-right: 10px;
 }
+#custom-mpris {
+    letter-spacing: -1px; /* Adjust this value to bring characters closer */
+}

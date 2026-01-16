@@ -212,11 +212,9 @@
         "on-scroll-down": "brightnessctl s 5%-"
     },
 
-    "mpris": {
+    "custom/mpris": {
         "interval": 5,
-        "format": "{player_icon} {dynamic}",
-        "format-paused": "{status_icon} <i>{dynamic}</i>",
-		"format-stopped": "■ Nothing playing",
+		"exec": "bash /home/river/.config/waybar/scripts/mpris.sh",
         "on-click-middle": "playerctl play-pause",
         "on-click": "playerctl previous",
         "on-click-right": "playerctl next",

@@ -29,7 +29,7 @@
         "pulseaudio",
         "backlight",
         "bluetooth",
-        "mpris",
+        "custom/mpris",
         "tray",
         "custom/swaync",
         "clock",
