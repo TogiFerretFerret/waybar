@@ -41,8 +41,8 @@
 
     "hyprland/window": {
         "format": "{title}",
-		"min-length": 32,
-        "max-length": 32,
+		"min-length": 15,
+        "max-length": 15,
         "on-click": "hyprctl dispatch window_activate {id}",
         "on-scroll-up": "hyprctl dispatch window_raise {id}",
         "on-scroll-down": "hyprctl dispatch window_lower {id}"
