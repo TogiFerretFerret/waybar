@@ -213,7 +213,7 @@
     },
 
     "mpris": {
-        "interval": 10,
+        "interval": 5,
         "format": "{player_icon} {dynamic}",
         "format-paused": "{status_icon} <i>{dynamic}</i>",
         "on-click-middle": "playerctl play-pause",
@@ -236,6 +236,7 @@
             "playing": "",
             "stopped": ""
         },
-        "max-length": 30
+        "max-length": 22,
+		"min-length": 22
     }
 }
