@@ -16,7 +16,6 @@
         // Replaced broken power-profiles with TLP
         "custom/tlp",
         "custom/cava_mviz",
-        "mpris",
         "hyprland/window"
     ],
 
