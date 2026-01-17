@@ -38,7 +38,16 @@
             "default": ""
         }
     },
-
+"idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+        "activated": "",  
+        "deactivated": ""
+    },
+    "tooltip": true,
+    "tooltip-format-activated": "Idle Inhibitor: ACTIVE (Standard locking disabled)",
+    "tooltip-format-deactivated": "Idle Inhibitor: INACTIVE"
+},
     "hyprland/window": {
         "format": "{title}",
 		"min-length": 15,
@@ -235,7 +244,7 @@
             "playing": "",
             "stopped": ""
         },
-        "max-length": 22,
-		"min-length": 22
+        "max-length": 20,
+		"min-length": 20
     }
 }

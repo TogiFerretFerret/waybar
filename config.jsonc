@@ -26,6 +26,7 @@
 
     // Modules Right
     "modules-right": [
+		"idle_inhibitor",
         "pulseaudio",
         "backlight",
         "bluetooth",
