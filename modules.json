@@ -222,7 +222,7 @@
     },
 
     "custom/mpris": {
-        "interval": 2,
+        "interval": 5,
 		"exec": "bash /home/river/.config/waybar/scripts/mpris.sh",
         "on-click-middle": "playerctl play-pause",
         "on-click": "playerctl previous",
